@@ -123,7 +123,8 @@ def writing(moments, col):
     """
     Here we will show the statistical moments with their explanation
 
-    Here we take 2 arguments, in moments we manage mean, sd, skewness and kurtosis while in col there is column analysis
+    Here we take 2 arguments, in moments we manage mean, 
+    sd, skewness and kurtosis while in col there is column analysis
     """
     mean, sd, skewnes, kurtosis = moments
 
@@ -142,16 +143,20 @@ def writing(moments, col):
         print('It is approximately symmetric.')
 
     if kurtosis > 0:
-        print('The data that is leptokurtic (heavytailed) have more extreme values than a normal distribution.')
+        print('The data that is leptokurtic (heavytailed) have'
+              'more extreme values than a normal distribution.')
     elif kurtosis < 0:
-        print('The data is platykurtic, or lighttailed, so there are less extreme values than in a usual distribution.')
+        print('The data is platykurtic, or lighttailed, so there'
+              'are less extreme values than in a usual distribution.')
     else:
-        print('The data tails are like those of a standard distribution since it is mesokurtic.')
+        print('The data tails are like those of a standard'
+              'distribution since it is mesokurtic.')
 
 
 def statistical_analysis(df, col: str):
     """
-    Calculates the statistical moments for a given column, including the mean, standard deviation, skewness, and kurtosis.
+    Calculates the statistical moments for a given column,
+    including the mean, standard deviation, skewness, and kurtosis.
 
     Here we have 2 arguments df means datframe, col means column
     """
@@ -164,7 +169,8 @@ def statistical_analysis(df, col: str):
 
 def preprocessing(df):
     """
-    Displays statistics, handles missing values, and illustrates correlations as part of the preprocessing step of the dataset.
+    Displays statistics, handles missing values, and illustrates 
+    correlations as part of the preprocessing step of the dataset.
 
     Here we have only 1 argument df means dataframe
     """
@@ -182,7 +188,8 @@ def preprocessing(df):
 
     print("The count of rows is after missing value management:", len(df))
     print("\nMissing value strategy specifics: "
-          "Numerical columns were filled with their mean, and catagorical columns with their mode. ")
+          "Numerical columns were filled with their mean,"
+          "and catagorical columns with their mode. ")
 
     print("\nDescriptive Statistics show:")
     print(df.describe())
@@ -191,7 +198,8 @@ def preprocessing(df):
     numeric_df = df.select_dtypes(include=['float64', 'int64'])
     corr_matrix = numeric_df.corr()
     print(corr_matrix)
-    print("\nA strong positive relationship between Blood Pressure measures (Systolic &amp; Diastolic) seen."
+    print("\nA strong positive relationship between"
+          "Blood Pressure measures (Systolic &amp; Diastolic) seen."
           "Cholesterol Level moderately also relates with Age")
 
     return df
@@ -199,7 +207,8 @@ def preprocessing(df):
 
 def main():
     """
-    Main purpose of this function is to load, clean, evaluate, and display data
+    Main purpose of this function is to load, clean, evaluate,
+    and display data
     """
     df = pd.read_csv('data.csv')  # Replace with your actual file name
     df = preprocessing(df)
@@ -207,7 +216,8 @@ def main():
     # Choose a meaningful column for analysis and explain your choice.
     col = 'BMI'  # Example: Body Mass Index
     print("\nSelected column for analysis: BMI")
-    print("Further Details about: BMI, a central health measurement, is often employed in medical research. "
+    print("Further Details about: BMI, a central"
+          "health measurement, is often employed in medical research."
           "It calculates body fat estimate from weight and h")
 
     plot_relational_plot(df)
