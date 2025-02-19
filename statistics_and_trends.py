@@ -5,7 +5,7 @@ make this a fully functional, documented file.
 You should NOT change any function, file,
 or variable names if they are provided here.
 Make use of the functions introduced in the lectures,
-and ensure your code follows PEP-8 guidelines, 
+and ensure your code follows PEP-8 guidelines,
 including proper docstrings.
 """
 
@@ -15,11 +15,13 @@ import pandas as pd
 import scipy.stats as ss
 import seaborn as sns
 
-# Data source: [Provide the actual link to your dataset, e.g., Kaggle, World Bank]
+# Data source: [Provide the actual link to your dataset,
+# e.g., Kaggle, World Bank]
 # Example: Data source:
 # https://www.kaggle.com/datasets/ankushpanday1/heart-attack-in-youth-vs-adult-in-france
 
-# I am going to create 3 graphs for each relational, statistical and catagorical.
+# I am going to create 3 graphs for each relational,
+# statistical and catagorical.
 
 
 def plot_relational_plot(df):
