@@ -1,9 +1,12 @@
 """
 This is the template file for the Statistics and Trends assignment.
-You are expected to complete all sections and make this a fully functional, documented file.
-You should NOT change any function, file, or variable names if they are provided here.
-Make use of the functions introduced in the lectures, 
-and ensure your code follows PEP-8 guidelines, including proper docstrings.
+You are expected to complete all sections and
+make this a fully functional, documented file.
+You should NOT change any function, file,
+or variable names if they are provided here.
+Make use of the functions introduced in the lectures,
+and ensure your code follows PEP-8 guidelines, 
+including proper docstrings.
 """
 
 import matplotlib.pyplot as plt
@@ -13,14 +16,16 @@ import scipy.stats as ss
 import seaborn as sns
 
 # Data source: [Provide the actual link to your dataset, e.g., Kaggle, World Bank]
-# Example: Data source: https://www.kaggle.com/datasets/ankushpanday1/heart-attack-in-youth-vs-adult-in-france
+# Example: Data source:
+# https://www.kaggle.com/datasets/ankushpanday1/heart-attack-in-youth-vs-adult-in-france
 
 # I am going to create 3 graphs for each relational, statistical and catagorical.
 
 
 def plot_relational_plot(df):
     """
-    For relational we will create line, step and scatter plot means we will show our data in these types for relational plot
+    For relational we will create line, step and scatter
+    plot means we will show our data in these types for relational plot
     """
     # Line Graph
     fig, ax = plt.subplots(figsize=(10, 6))
@@ -123,7 +128,7 @@ def writing(moments, col):
     """
     Here we will show the statistical moments with their explanation
 
-    Here we take 2 arguments, in moments we manage mean, 
+    Here we take 2 arguments, in moments we manage mean,
     sd, skewness and kurtosis while in col there is column analysis
     """
     mean, sd, skewnes, kurtosis = moments
@@ -169,7 +174,7 @@ def statistical_analysis(df, col: str):
 
 def preprocessing(df):
     """
-    Displays statistics, handles missing values, and illustrates 
+    Displays statistics, handles missing values, and illustrates
     correlations as part of the preprocessing step of the dataset.
 
     Here we have only 1 argument df means dataframe
