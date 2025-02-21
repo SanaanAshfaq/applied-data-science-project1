@@ -1,5 +1,5 @@
 """
-This is the template file for the 
+This is the template file for the
 Statistics and Trends assignment.
 You are expected to complete all sections and
 make this a fully functional, documented file.
@@ -73,7 +73,8 @@ def statistical_analysis(df, col: str):
     Calculates the statistical moments for a given column,
     including the mean, standard deviation, skewness, and kurtosis.
 
-    Here we have 2 arguments df means datframe, col means column and simlarly we return these all.
+    Here we have 2 arguments df means datframe,
+    col means column and simlarly we return these all.
     """
     mean = df[col].mean()
     sd = df[col].std()
@@ -115,7 +116,8 @@ def preprocessing(df):
     print(corr_matrix)
 
     print("\nFindings:")
-    print(" - Strong positive relationship between Systolic & Diastolic Blood Pressure.")
+    print(" - Strong positive relationship between "
+          "Systolic & Diastolic Blood Pressure.")
     print(" - Moderate correlation between Cholesterol Level and Age.")
 
     return df
@@ -126,7 +128,8 @@ def writing(moments, col):
     The statistical moments are shown along with their definitions.
 
     Arguments:
-        moments: It nncludes mean, standard deviation, skewness, and kurtosis.
+        moments: It nncludes mean, standard deviation, skewness,
+        and kurtosis.
         column: Indicating the column being examined.
     """
     mean, sd, skewnes, kurtosis = moments
@@ -139,9 +142,11 @@ def writing(moments, col):
 
     # Following are the conditions
     if skewnes > 0:
-        print('Data is positively right skewed (means has a longer right tail).')
+        print('Data is positively right skewed '
+              '(means has a longer right tail).')
     elif skewnes < 0:
-        print('Data is negatively left skewed (means has a longer left tail).')
+        print('Data is negatively left skewed'
+              ' (means has a longer left tail).')
     else:
         print('It is approximately symmetric.')
 
@@ -164,11 +169,13 @@ def main():
     df = pd.read_csv('data.csv')
     df = preprocessing(df)
 
-    # Here we are choosing the BMI as our selection on which basis analysis will done
+    # Here we are choosing the BMI as our selection
+    # on which basis analysis will done
     col = 'BMI'
     print("\nSelected column for analysis: BMI")
     print("More information on BMI: An important health marker"
-          "often used in medical research. It calculates body fat from weight and height.")
+          "often used in medical research. It calculates "
+          "body fat from weight and height.")
 
     plot_relational_plot(df)
     plot_statistical_plot(df)
